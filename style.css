@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Animazione di scivolamento e comparsa per le righe */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-pop-in {
+    animation: popIn 0.4s ease-out forwards;
+    opacity: 0;
+}

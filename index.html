@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokèdex</title>
+    <style>
+      html, body {
+        background-color: #111827 !important;
+        color: #f3f4f6 !important;
+      }
+    </style>
+    <script type="module" src="main.js"></script>
+  </head>
+  <!-- Sfondo scuro e testo chiaro applicati in modo fisso -->
+  <body class="p-8 bg-gray-900 text-gray-100">
+    
+    <h1 class="text-center font-bold text-white text-4xl mb-8">
+      Pokèmon Dashboard
+    </h1>
+
+    <div>
+      <div id="loading" class="text-center text-xl font-bold mb-4 text-slate-500 hidden">
+        Loading pokemon...
+      </div>
+
+      <!-- BARRA DI RICERCA -->
+      <div class="mb-8 flex justify-center">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search Pokémon by name..."
+          class="w-full md:w-1/2 p-3 bg-slate-800 text-white border-2 border-slate-700 rounded-xl focus:border-red-500 outline-none"
+        />
+      </div>
+
+      <!-- Tabella -->
+      <div class="min-h-[800px]">
+        <table id="pokemonTable" class="w-full text-center border-collapse">
+          <thead>
+            <tr>
+              <th class="p-4 border-b border-slate-700 text-slate-300">Image</th>
+              <th class="p-4 border-b border-slate-700 text-slate-300">Name</th>
+              <th class="p-4 border-b border-slate-700 text-slate-300">ID</th>
+              <th class="p-4 border-b border-slate-700 text-slate-300">Type</th>
+              <th class="p-4 border-b border-slate-700 text-slate-300">Height</th>
+              <th class="p-4 border-b border-slate-700 text-slate-300">Weight</th>
+            </tr>
+          </thead>
+          <tbody id="pokemonTableBody"></tbody>
+        </table>
+      </div>
+      <div id="detailPanel"></div>
+
+      <div class="flex justify-end gap-4 mt-6">
+        <button id="btn-first" class="bg-red-500 hover:bg-red-400 text-white font-black uppercase tracking-wider py-2 px-6 rounded-xl border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
+          First page
+        </button>
+        <button id="btn-prev" class="bg-yellow-400 hover:bg-yellow-300 text-black font-black uppercase tracking-wider py-2 px-6 rounded-xl border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
+          Previous
+        </button>
+        <button id="btn-next" class="bg-red-500 hover:bg-red-400 text-white font-black uppercase tracking-wider py-2 px-6 rounded-xl border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all">
+          Next
+        </button>
+      </div>
+    </div>
+
+    <div id="pagination" class="mt-4 font-bold text-slate-500">
+      <div id="pageInfo"></div>
+    </div>
+  </body>
+</html>
