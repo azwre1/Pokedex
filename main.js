@@ -93,8 +93,8 @@ function displayPokemonTable(pokemonList) {
         <td class="p-4 border-b border-slate-700 capitalize font-bold text-slate-300">${pokemon.name}</td>
         <td class="p-4 border-b border-slate-700 text-slate-500 text-slate-300">#${pokemon.id.toString().padStart(3, "0")}</td>
         <td class="p-4 border-b border-slate-700">${typeHtml}</td>
-        <td class="p-4 border-b border-slate-700 text-slate-300">${(pokemon.height / 10).toFixed(1)}m</td>
-        <td class="p-4 border-b border-slate-700 text-slate-300">${(pokemon.weight / 10).toFixed(1)}kg</td>
+        <td class="p-4 border-b border-slate-700 text-slate-300 hidden md:table-cell">${(pokemon.height / 10).toFixed(1)}m</td>
+        <td class="p-4 border-b border-slate-700 text-slate-300 hidden md:table-cell">${(pokemon.weight / 10).toFixed(1)}kg</td>
         `;
     tbody.appendChild(row);
   });
